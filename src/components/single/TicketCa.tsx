@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 
 const tickets = [
     { id: 1, status: "Available" },
@@ -9,7 +9,15 @@ const tickets = [
     { id: 6, status: "Available" },
   ];
 
-const TickCar = ({status}) => {
+
+  type TicketStatus = "Available" | "Sold Out";
+
+  interface TicketProps {
+    status: TicketStatus;
+  }
+
+
+const TickCar = ({status}: TicketProps) => {
     const isSoldOut = status === "Sold Out";
     return(
         <div
@@ -46,7 +54,7 @@ const TicketCa = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
         {tickets.map((ticket) => (
-          <TickCar key={ticket.id} status={ticket.status} />
+          <TickCar key={ticket.id} status={ticket.status as TicketStatus} />
         ))}
       </div>
     </div>

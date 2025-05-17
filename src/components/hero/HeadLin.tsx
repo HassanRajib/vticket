@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import ColourfulText from "@/components/ui/colourful-text";
 
 

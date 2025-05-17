@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+"use client"
+
+import { useState } from 'react';
 
 const RegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState({

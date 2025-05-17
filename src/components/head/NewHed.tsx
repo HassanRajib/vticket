@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+"use client"
+
+import { useState } from 'react'
 import { Menu, MenuItem, HoveredLink } from '../ui/navbar-menu'
 import { ModeToggle } from '../mood/MoodTogol'
 import UserDrop from '../user/UserDrop'

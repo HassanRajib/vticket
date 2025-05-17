@@ -1,4 +1,4 @@
-import React from 'react'
+"use cilent"
 
 const VariForm = () => {
   return (
@@ -20,7 +20,7 @@ const VariForm = () => {
           <form>
             <div className="grid gap-y-4">
               <div>
-                <label for="ticket" className="block text-sm font-bold ml-1 mb-2 dark:text-white">Ticket no</label>
+                <label htmlFor="ticket" className="block text-sm font-bold ml-1 mb-2 dark:text-white">Ticket no</label>
                 <div className="relative">
                   <input type="text" id="ticket" name="ticket" className="py-3 px-4 block w-full border-2 border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 shadow-sm" required aria-describedby="email-error" placeholder='VR12345678'/>
                 </div>

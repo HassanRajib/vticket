@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+"use client"
+
+import { useState } from "react";
 import { ModeToggle } from "../mood/MoodTogol";
 import { Search, Menu, X } from "lucide-react";
 import UserDrop from "../user/UserDrop";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Head = () => {
-  const [hovered, setHovered] = useState({
+  const [hovered, setHovered] = useState <{[key: string]: boolean}>({  
     home: false,
     features: false,
     pricing: false,
@@ -15,19 +17,13 @@ const Head = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleMouseEnter = (key) => {
-    setHovered((prev) => ({ ...prev, [key]: true }));
-  };
-
-  const handleMouseLeave = (key) => {
-    setHovered((prev) => ({ ...prev, [key]: false }));
-  };
+  
 
   const navItems = [
-    { label: "Home", key:"/" },
-    { label: "Activities", key:"/about" },
-    { label: "Events", key:"/upevent" },
-    { label: "Contact", key:"/contact"  },
+    { label: "Home", loca:"/" },
+    { label: "Activities", loca:"/about" },
+    { label: "Events", loca:"/upevent" },
+    { label: "Contact", loca:"/contact"  },
   ];
 
   return (
@@ -55,19 +51,19 @@ const Head = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-base">
-          {navItems.map(({ label, key }) => (
+          {navItems.map(({ label, loca }) => (
             <Link
-            key={key}
-            to={key}
+            key={loca}
+            to={loca}
             className="relative font-medium text-gray-600 transition hover:text-gray-900 dark:text-white"
-            onMouseEnter={() => setHovered((prev) => ({ ...prev, [key]: true }))}
-            onMouseLeave={() => setHovered((prev) => ({ ...prev, [key]: false }))}
+            onMouseEnter={() => setHovered((prev) => ({ ...prev, [loca]: true }))}
+            onMouseLeave={() => setHovered((prev) => ({ ...prev, [loca]: false }))}
           >
             <span className="block">{label}</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 -mb-1 overflow-hidden">
               <span
                 className={`block origin-left transform bg-gray-900 dark:bg-white h-full transition-transform duration-300 ${
-                  hovered[key] ? "scale-x-100" : "scale-x-0"
+                  hovered[loca] ? "scale-x-100" : "scale-x-0"
                 }`}
               />
             </span>
@@ -96,10 +92,10 @@ const Head = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-0 left-0 z-40 w-3/4 h-full p-6 bg-white dark:bg-gray-900 shadow-lg transition duration-300">
           <div className="flex flex-col space-y-6">
-            {navItems.map(({ label, key }) => (
+            {navItems.map(({ label, loca }) => (
               <Link
-                key={key}
-                to={key}
+                key={loca}
+                to={loca}
                 className="text-lg font-medium text-gray-700 dark:text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
