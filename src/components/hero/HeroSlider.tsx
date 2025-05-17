@@ -5,14 +5,14 @@ import { ImagesSlider } from '../ui/images-slider'
 import { Link } from 'react-router-dom'
 
 const HeroSlider = () => {
-    const images = [
+    const image = [
         "../image/tha1.png",
         "../image/tha.jpeg",
         "../image/hero.png"
     ]
   return (
-    <div> 
-        <ImagesSlider className="h-[40rem]" images={images}>
+    <div className=' w-full'> 
+        <ImagesSlider className="h-[40rem]" images={image}>
       <motion.div
         initial={{
           opacity: 0,
