@@ -19,12 +19,12 @@ const BentoGri = () => {
         {
           title: "The Digital Revolution",
           description: "Dive into the transformative power of technology.",
-          header: <Skeleton />,
+          header: ( <img src='../image/tha.jpeg' alt='hello' className='w-full h-full object-cover rounded-xl'/>),
         },
         {
           title: "The Art of Design",
           description: "Discover the beauty of thoughtful and functional design.",
-          header: <Skeleton />,
+          header: ( <img src='../image/tha.jpeg' alt='hello' className='w-full h-full object-cover rounded-xl'/>),
          },
         {
           title: "The Power of Communication",
@@ -34,17 +34,17 @@ const BentoGri = () => {
         {
           title: "The Pursuit of Knowledge",
           description: "Join the quest for understanding and enlightenment.",
-          header: <Skeleton />,  
+          header: ( <img src='../image/tha.jpeg' alt='hello' className='w-full h-full object-cover rounded-xl'/>),  
         },
         {
           title: "The Joy of Creation",
           description: "Experience the thrill of bringing ideas to life.",
-          header: <Skeleton />,   
+          header:  ( <img src='../image/tha.jpeg' alt='hello' className='w-full h-full object-cover rounded-xl'/>), 
         },
         {
           title: "The Spirit of Adventure",
           description: "Embark on exciting journeys and thrilling discoveries.",
-          header: <Skeleton />,
+          header: ( <img src='../image/hero.png' alt='hello' className='w-full h-fit object-cover rounded-xl'/>),
         },
       ];
   return (

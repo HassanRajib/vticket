@@ -10,18 +10,15 @@ const ConForm = () => {
                     className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
                     Get in Touch
                 </h2>
-                <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">In hac habitasse platea
-                    dictumst
+                <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">Thank you for reaching us! We are always happy to hear from you
                 </p>
             </div>
         </div>
         <div className="flex items-stretch justify-center">
             <div className="grid md:grid-cols-2">
-                <div className="h-full pr-6">
-                    <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                        className aptent taciti sociosqu ad
-                        litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque
-                        sagittis ante, ac tincidunt sem venenatis ut.
+                <div className="h-full p-6">
+                    <p className="mt-0 mb-12 text-lg text-gray-600 dark:text-slate-400 text-justify">
+                    We highly encourage to get in touch with us for any query or feedback regarding our service or product. Just connect with us in your favorable platform and we will get back to you right away.
                     </p>
                     <ul className="mb-6 md:mb-0">
                         <li className="flex">
@@ -79,7 +76,7 @@ const ConForm = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+                <div className="card h-fit max-w-6xl md:p-6" id="form">
                     <h2 className="mb-4 text-2xl font-bold dark:text-white">Ready to Get Started?</h2>
                     <form id="contactForm">
                         <div className="mb-6">

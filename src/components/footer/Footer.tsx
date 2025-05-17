@@ -28,7 +28,7 @@ const Footer = () => {
       {/* Resources */}
       <div>
         <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-        <nav className="hidden md:flex flex-col space-x-6 text-base">
+        <nav className="hidden md:flex flex-col space-x-6 text-base space-y-2">
                   {navItems.map(({ label, key }) => (
                     // <Link
                     //   key={key}
@@ -49,8 +49,8 @@ const Footer = () => {
                     <NavLink
           to={key}
           className={({ isActive }) =>
-            `relative font-medium transition hover:text-gray-900 dark:hover:text-gray-400  ${
-              isActive ? "text-black dark:text-white" : "text-gray-600 dark:text-white"
+            `relative font-medium transition hover:text-gray-900 dark:hover:text-gray-400 ${
+              isActive ? "text-black dark:text-white" : "text-gray-600 dark:text-white "
             }`
           }
         >

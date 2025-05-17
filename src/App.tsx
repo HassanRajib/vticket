@@ -7,6 +7,9 @@ import SigEve from "./pages/SigEve"
 import AboutUs from "./pages/AboutUs"
 import ConTact from "./pages/ConTact"
 import VariFy from "./pages/VariFy"
+import SiGnup from "./pages/SiGnup"
+import SigNi from "./pages/SigNi"
+
 
 function App() {
  
@@ -20,6 +23,9 @@ function App() {
         <Route path="about" element={<AboutUs/>}/>
         <Route path="contact" element={<ConTact/>}/>
         <Route path="varify" element={<VariFy/>}/>
+        <Route path="signup" element={<SiGnup/>}/>
+        <Route path="signin" element={<SigNi/>}/>
+
       </Routes>
     </BrowserRouter>
     </ThemeProvider>

@@ -2,6 +2,7 @@
 
 import Footer from '@/components/footer/Footer'
 import Head from '@/components/head/Head'
+import NewHed from '@/components/head/NewHed'
 import { ColourfulTextDemo } from '@/components/hero/HeadLin'
 import HeroCaro from '@/components/hero/HeroCaro'
 import HeroSlider from '@/components/hero/HeroSlider'

@@ -31,15 +31,15 @@ const Head = () => {
   ];
 
   return (
-    <header className="relative w-full px-6 text-gray-700 bg-white dark:bg-[#0A0A0A] body-font">
-      <div className="flex flex-wrap items-center justify-between py-4 mx-auto max-w-7xl">
+    <header className="relative w-full px-6 text-gray-700 bg-white dark:bg-[#0A0A0A] body-font rounded-full">
+      <div className="flex flex-wrap items-center justify-between py-1 mx-auto max-w-7xl">
         {/* Brand Logo */}
-        <a
-          href="#_"
+        <Link
+          to="/"
           className="text-2xl font-extrabold text-black dark:text-white"
         >
           vTickets
-        </a>
+        </Link>
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
@@ -56,32 +56,23 @@ const Head = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-base">
           {navItems.map(({ label, key }) => (
-            // <Link
-            //   key={key}
-            //   to={key}
-            //   className="relative font-medium text-gray-600 transition hover:text-gray-900 dark:text-white"
-            //   onMouseEnter={() => setHovered((prev) => ({ ...prev, [key]: true }))}
-            //   onMouseLeave={() => setHovered((prev) => ({ ...prev, [key]: false }))}
-            // >
-            //   <span className="block">{label}</span>
-            //   <span className="absolute bottom-0 left-0 w-full h-0.5 -mb-1">
-            //     <span
-            //       className={`block origin-left transform bg-gray-900 transition-transform duration-300 ${
-            //         hovered[label] ? "scale-x-100" : "scale-x-0"
-            //       }`}
-            //     />
-            //   </span>
-            // </Link>
-            <NavLink
-  to={key}
-  className={({ isActive }) =>
-    `relative font-medium transition hover:text-gray-900 dark:hover:text-gray-400  ${
-      isActive ? "text-black dark:text-white" : "text-gray-600 dark:text-white"
-    }`
-  }
->
-  {label}
-</NavLink>
+            <Link
+            key={key}
+            to={key}
+            className="relative font-medium text-gray-600 transition hover:text-gray-900 dark:text-white"
+            onMouseEnter={() => setHovered((prev) => ({ ...prev, [key]: true }))}
+            onMouseLeave={() => setHovered((prev) => ({ ...prev, [key]: false }))}
+          >
+            <span className="block">{label}</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 -mb-1 overflow-hidden">
+              <span
+                className={`block origin-left transform bg-gray-900 dark:bg-white h-full transition-transform duration-300 ${
+                  hovered[key] ? "scale-x-100" : "scale-x-0"
+                }`}
+              />
+            </span>
+          </Link>
+            
           ))}
         </nav>
 

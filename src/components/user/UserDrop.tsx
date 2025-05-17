@@ -7,6 +7,8 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
+import { Link } from "react-router-dom";
+
 const UserDrop = () => {
   return (
     <DropdownMenu>
@@ -18,14 +20,14 @@ const UserDrop = () => {
 
         <DropdownMenuContent align="end" className="w-32">
         <DropdownMenuItem>
-          <a href="/signin" className="w-full block text-sm text-gray-700 dark:text-gray-100">
+          <Link to="/signin" className="w-full block text-sm text-gray-700 dark:text-gray-100">
             Sign in
-          </a>
+          </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <a href="/signup" className="w-full block text-sm text-gray-700 dark:text-gray-100">
+          <Link to="/signup" className="w-full block text-sm text-gray-700 dark:text-gray-100">
             Sign up
-          </a>
+          </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
