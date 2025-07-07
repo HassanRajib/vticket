@@ -9,6 +9,9 @@ import ConTact from "./pages/ConTact"
 import VariFy from "./pages/VariFy"
 import SiGnup from "./pages/SiGnup"
 import SigNi from "./pages/SigNi"
+import AdminLaout from "./pages/admin/AdminLaout"
+import AdminDeshboard from "./pages/admin/AdminDeshboard"
+import AdminEvent from "./pages/admin/AdminEvent"
 
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
         <Route path="varify" element={<VariFy/>}/>
         <Route path="signup" element={<SiGnup/>}/>
         <Route path="signin" element={<SigNi/>}/>
+        <Route path="/admin" element={<AdminLaout/>}>
+          <Route index element={<AdminDeshboard/>}/>
+          <Route path="events" element={<AdminEvent/>}/> 
+        </Route>
 
       </Routes>
     </BrowserRouter>
